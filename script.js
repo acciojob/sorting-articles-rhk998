@@ -1,6 +1,4 @@
-//your JS code here. If required.
-
- const bands = [
+  const bands = [
             'The Plot in You',
             'The Devil Wears Prada',
             'Pierce the Veil',
@@ -15,18 +13,17 @@
             'Anywhere But Here',
             'An Old Dog'
         ];
- function sortBands(bands) {
+
+        function sortBands(bands) {
             return bands.sort((a, b) => {
                 const removeArticles = str => str.replace(/^(a |an |the )/i, '').trim();
                 return removeArticles(a).localeCompare(removeArticles(b));
             });
         }
 
-        // Get the sorted bands
         const sortedBands = sortBands(bands);
 
-        // Get the ul element and populate it with sorted bands
-        const bandList = document.getElementById('band');
+        const bandList = document.getElementById('bands'); // Updated to 'bands'
         sortedBands.forEach(band => {
             const li = document.createElement('li');
             li.textContent = band;
