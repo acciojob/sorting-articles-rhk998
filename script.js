@@ -8,7 +8,7 @@ const sortedBands = bands.sort((a, b) => {
 });
 
 const ul = document.createElement('ul');
-ul.id = 'band';
+ul.id = 'bands';
 
 sortedBands.forEach(band => {
   const li = document.createElement('li');
